@@ -29,7 +29,7 @@ def GenerateConfig(unused_context):
           'network': NETWORK_NAME
       }
   }, {
-      'name': 'vc-web02-us-vm-g1',
+      'name': 'web02-us-vm-g1',
       'type': 'vm-template.py',
       'properties': {
           'machineType': 'g1-small',
