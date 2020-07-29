@@ -2,7 +2,7 @@
 #. for both the machineType and network parameters.
 
 resources:
-- name: roys-first-vm
+- name: my-first-vm
   type: compute.v1.instance
   properties:
     zone: us-central1-f
