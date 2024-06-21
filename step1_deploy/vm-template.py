@@ -14,9 +14,7 @@
 
 """Creates the virtual machine with environment variables and startup script."""
 
-
 COMPUTE_URL_BASE = 'https://www.googleapis.com/compute/v1/'
-
 
 def GenerateConfig(context):
   """Creates the virtual machine."""
@@ -38,7 +36,7 @@ def GenerateConfig(context):
               'initializeParams': {
                   'sourceImage': ''.join([COMPUTE_URL_BASE, 'projects/',
                                           'debian-cloud/global/',
-                                          'images/family/debian-9'])
+                                          'images/family/debian-11'])
               }
           }],
           'networkInterfaces': [{
@@ -53,7 +51,7 @@ def GenerateConfig(context):
               'items': [{
                   'key': 'startup-script',
                   'value': ''.join(['#!/bin/bash\n',
-                                    'python -m SimpleHTTPServer 80'])
+                                    'python3 -m http.server 80'])
               }]
           }
       }
